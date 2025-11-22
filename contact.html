@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="contact.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    
+<header class="nav">
+    <h2 class="logo">My Portofolio</h2>
+    <ul class="menu">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="artikel.html">Artikel</a></li>
+        <li><a href="about.html">Apa Itu Dunia IT?</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+</header>
+
+<section class="contact-section">
+    <div class="contact-card" data-aos="fade-up" data-aos-duration="1400">
+        <img src="foto.jpg" alt="Profile">
+        <h1 data-aos="fade-up" data-aos-delay="200">Aziz Chandra</h1>
+        <p data-aos="fade-up" data-aos-delay="300">Web Developer | Game Developer | Cybersecurity</p>
+        
+        <div class="contact-info" data-aos="fade-up" data-aos-delay="400">
+            <p><b>Email:</b> azizcandra274@gmail.com</p>
+            <p><b>WhatsApp:</b> 0812-xxxx-xxxx</p>
+            <p><b>Location:</b> Indonesia</p>
+        </div>
+
+        <div class="social" data-aos="fade-up" data-aos-delay="500">
+            <a href="https://www.instagram.com/az1zzajh_/">Instagram</a>
+            <a href="https://github.com/VinnCyy4sec">GitHub</a>
+            <a href="">LinkedIn</a>
+        </div>
+
+     <form class="contact-form" data-aos="fade-up" data-aos-delay="600" action="https://formsubmit.co/azizcandra274@gmail.com" method="POST">
+       <input type="text" name="name" placeholder="Nama Anda" required>
+       <input type="email" name="email" placeholder="Email Anda" required>
+       <textarea name="message" placeholder="Pesan..." required></textarea>
+
+       <input type="hidden" name="_captcha" value="false">
+       <input type="hidden" name="_template" value="table">
+
+       <button type="submit">Kirim Pesan</button>
+      </form>
+    </div>
+</section>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+</body>
+</html>

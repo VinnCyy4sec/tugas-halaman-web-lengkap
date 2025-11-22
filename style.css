@@ -1,0 +1,237 @@
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote::before, blockquote::after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    font: 16px/28px arial, sans-serif;
+    background-color: #eaeaea;
+    color: #333;
+    font-family: "MyCustomFont";
+}
+
+.container {
+    width: 800px;
+    margin: auto;
+    background-color: white;
+}
+
+.header {
+    padding: 20px;
+}
+
+.header .judul {
+    font: size 40px;
+    font-weight: bold;
+}
+
+.header ul li {
+    display: inline-block;
+    margin-top: 15px;
+    margin-right: 10px;
+}
+
+.header a {
+    text-decoration: none;
+    color: salmon;
+    padding: 3px;
+}
+.header a:hover {
+    background-color: lightskyblue;
+    color: white;
+}
+
+.hero {
+    height: 350px;
+    background-image: url(program.jpg);
+    background-position: 0 -50px;
+    border-top: 5px solid lightskyblue;
+    border-bottom: 5px solid lightgreen;
+}
+
+.content {
+    padding: 15px;
+}
+
+.content h2 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.content .penulis {
+    font-size: 13px;
+    margin-top: -5px;
+}
+
+.content .penulis a {
+    color: salmon;
+    text-decoration: none;
+}
+
+.footer {
+    background-color: #333;
+    padding: 8px;
+}
+
+.footer .copy {
+    color: #eaeaea;
+    text-align: center;
+    font-size: 12px;
+}
+
+.video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+@font-face {
+    font-family: "MyCustomFont";
+    src: url("Vogue.ttf");
+}
+
+body {
+  opacity: 0;
+  animation: fadeInLoad 0.8s ease-out forwards;
+}
+
+@keyframes fadeInLoad {
+  to {
+    opacity: 1;
+  }
+}
+
+.header,
+.content,
+.footer {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+.header {
+  animation-delay: 0.2s;
+}
+.content {
+  animation-delay: 0.4s;
+}
+.footer {
+  animation-delay: 0.6s;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header a {
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.content h2 {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: titlePop 0.7s ease-out forwards;
+  animation-delay: 0.6s;
+}
+
+@keyframes titlePop {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.content p {
+  opacity: 0;
+  animation: fadeInText 0.6s ease-out forwards;
+}
+.content p:nth-child(2) { animation-delay: 0.7s; }
+.content p:nth-child(3) { animation-delay: 0.8s; }
+.content p:nth-child(4) { animation-delay: 0.9s; }
+.content p:nth-child(5) { animation-delay: 1.0s; }
+.content p:nth-child(6) { animation-delay: 1.1s; }
+.content p:nth-child(7) { animation-delay: 1.2s; }
+.content p:nth-child(8) { animation-delay: 1.3s; }
+
+@keyframes fadeInText {
+  to {
+    opacity: 1;
+  }
+}
+
+.container {
+  overflow: hidden;
+}
+
+.header ul li {
+  display: inline-block;
+  margin-top: 15px;
+  margin-right: 10px;
+  position: relative;
+}
+
+.header a {
+  text-decoration: none;
+  color: salmon;
+  padding: 3px 12px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.header a:hover {
+  background-color: lightskyblue;
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(135, 206, 235, 0.7);
+}
+
+.header a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: lightskyblue;
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+.header a:hover::after {
+  width: 100%;
+}
+
+.header a:active {
+  transform: scale(0.98);
+  box-shadow: 0 0 8px rgba(135, 206, 235, 0.5);
+}
+
+.header a:hover {
+  color: white !important;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
